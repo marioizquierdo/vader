@@ -1,0 +1,30 @@
+{
+  "name": "vader",
+  "description": "Vader is an experimental programming language that compiles to JavaScript, fully compatible with it and optimized for developer power",
+  "keywords": [
+    "javascript",
+    "language",
+    "vader",
+    "compiler"
+  ],
+  "author": "Mario Izquierdo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "preferGlobal": true,
+  "main": "./lib/vader",
+  "bin": {
+    "vader": "./bin/vader"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marioizquierdo/vader.git"
+  },
+  "devDependencies": {
+    "pegjs": "~0.9.0"
+  }
+}
