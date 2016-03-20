@@ -7,7 +7,9 @@ The goal is to maximize developer happiness with a clean and consistent sytax, w
 
 ## Syntax Example
 
-After spending a while designing the syntax and features
+None!
+
+After spending a while designing the syntax and features, I realized that need to build a simple compiler first. Once I know I can build it, I'll come back to syntax and crazy features ...
 
 ## Usage
 
