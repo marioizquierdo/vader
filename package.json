@@ -1,14 +1,14 @@
 {
-  "name": "vader",
-  "description": "Vader is an experimental programming language that compiles to JavaScript, fully compatible with it and optimized for developer power",
+  "name": "vaderscript",
+  "description": "VaderScript is a language that compiles into JavaScript and is fully compatible with it",
   "keywords": [
     "javascript",
     "language",
-    "vader",
+    "vaderscript",
     "compiler"
   ],
   "author": "Mario Izquierdo",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "engines": {
     "node": ">=4.2.0"
