@@ -45,16 +45,16 @@ add(3, 5) // returns 8
 add(3) // TypeError: argument 'y' can not be undefined
 
 // Default parameters (param=val)
-printInitials = (list, separator=",") -> list.map(-> $0.charAt(0)).join(separator)
-printInitials(["apple", "banana"]) // returns "a,b"
-printInitials(["apple", "banana"], "-") // returns "a-b"
+initials = (fullName, separator=".") -> fullName.split(" ").map(-> $0.charAt(0)).join(separator)
+initials("Hommer J Simpson") // returns "H.J.S"
+initials("Hommer J Simpson", "--") // returns "H--J--S"
 
 // Named parameters ({params})
-obviousTotal = ({value, tax, discount}) -> value + tax - discount
-obviousTotal(value: 100, tax: 10, discount: 5) // returns 105
+total = ({value, tax, discount}) -> value + tax - discount
+total(value: 100, tax: 10, discount: 5) // returns 105
 
-// Combined parameter types
-total = (value, {tax = subtotal*0.1, discount=0}) -> subtotal + tax - discount
+// Regular, Named and Default parameters combined
+total = (value, {tax = value*0.1, discount = 0}) -> subtotal + tax - discount
 total(100) // returns 110
 total(100, tax: 12, discount: 5) // returns 107
 
@@ -64,7 +64,7 @@ x is :number // true
 x is :string // false
 x as :string // "4"
 
-mul = (x:number, y:number = 1) -> x * y
+mul = (x:number, y:number = 1) -> { x * y }
 mul("foo") // TypeError: argument x:number can not have value "foo"
 
 // Pattern Matching
@@ -83,7 +83,7 @@ obj.foo // Error: property foo is undefined
 obj.foo? // returns undefined
 obj.foo?.var?.stuff? // undefined
 
-obj.foo ? "default" // Returns obj.foo or "default" if foo is null or undefined 
+val = obj.foo ? "default" // obj.foo or "default" if foo is null or undefined 
 
 obj.foo ?= "default" // assigns only if null or undefined (set default)
 obj.foo // returns "default"
